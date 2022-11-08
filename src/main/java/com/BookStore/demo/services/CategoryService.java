@@ -52,10 +52,10 @@ public class CategoryService {
         categoryRepo.save(category);
     }
 
-    public ResponseEntity<?> deleteCategory(Long categoryId){
-        verifyCategory(categoryId);
+    public void deleteCategory(Long categoryId){
+
         categoryRepo.deleteById(categoryId);
-        return new ResponseEntity<>(HttpStatus.OK);
+
     }
 
 
